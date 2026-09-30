@@ -1,14 +1,21 @@
 import type { Question } from '../types.ts';
 
-/** Eje primario `rel`: −100 = Estado confesional, +100 = laicidad. Signo del efecto primario alterno (+, −, +…). */
+/** Eje primario `rel`: −100 = Estado confesional, +100 = laicidad. */
 export const relQuestions: Question[] = [
   // Tier 1
+  {
+    id: 'rel-03',
+    tier: 1,
+    topic: 'religion',
+    effects: { rel: 2 },
+    text: 'Las iglesias deberían pagar impuestos sobre sus ingresos, igual que una empresa.',
+  },
   {
     id: 'rel-01',
     tier: 1,
     topic: 'religion',
     effects: { rel: 3 },
-    text: 'La República Dominicana debería ser un Estado laico, sin religión oficial ni Concordato con el Vaticano.',
+    text: 'La República Dominicana debería poner fin al Concordato de 1954 con el Vaticano.',
     context:
       'El Concordato de 1954 con la Santa Sede reconoce el catolicismo como religión de la nación y da a la Iglesia efectos civiles en el matrimonio, enseñanza religiosa y exenciones.',
   },
@@ -20,38 +27,33 @@ export const relQuestions: Question[] = [
     text: 'La lectura de la Biblia debería ser obligatoria en las escuelas públicas, como manda la Ley 44-00.',
     context: 'La Ley 44-00 ordena la lectura e instrucción bíblica en las escuelas públicas, pero nunca se ha aplicado.',
   },
-  {
-    id: 'rel-03',
-    tier: 1,
-    topic: 'religion',
-    effects: { rel: 2 },
-    text: 'Las iglesias deberían pagar impuestos como cualquier otra institución.',
-  },
   // Tier 2
   {
     id: 'rel-04',
     tier: 2,
     topic: 'religion',
     effects: { rel: -2 },
-    text: 'Las iglesias deben tener voz en la elaboración de leyes como el Código Penal.',
+    text: 'El Congreso debería consultar formalmente a las iglesias antes de aprobar leyes como el Código Penal.',
     context:
       'El nuevo Código Penal es la Ley 74-25. En agosto de 2026, el bloque evangélico y sectores católicos se opusieron ante el Tribunal Constitucional a incluir en él la orientación sexual.',
   },
   {
     id: 'rel-05',
     tier: 2,
-    topic: 'educacion',
+    topic: 'religion',
     effects: { rel: 2 },
-    text: 'El Estado no debería financiar escuelas ni actividades religiosas.',
+    text: 'El presupuesto del Estado no debería incluir aportes a las iglesias para sus actividades religiosas.',
+    context:
+      'Por el Concordato de 1954 (art. VII), el Estado construye las sedes de las diócesis y da una subvención mensual a la Iglesia católica. El Gobierno también hace aportes a iglesias evangélicas, por ejemplo para construir templos.',
   },
-  // Tier 3
   {
     id: 'rel-06',
-    tier: 3,
+    tier: 2,
     topic: 'religion',
     effects: { rel: -2 },
     text: 'Un presidente debería gobernar según principios cristianos.',
   },
+  // Tier 3
   {
     id: 'rel-07',
     tier: 3,
@@ -64,7 +66,7 @@ export const relQuestions: Question[] = [
     tier: 3,
     topic: 'educacion',
     effects: { rel: -2 },
-    text: 'Las escuelas públicas deberían dar clases de religión dentro del horario escolar.',
+    text: 'Las escuelas públicas deberían enseñar la fe cristiana dentro del horario escolar.',
   },
   {
     id: 'rel-09',
@@ -108,14 +110,14 @@ export const relQuestions: Question[] = [
     tier: 4,
     topic: 'religion',
     effects: { rel: -3, ide: -1 },
-    text: 'El Estado debería restringir las religiones no cristianas, como el islam.',
+    text: 'El Estado no debería permitir que religiones no cristianas, como el islam, abran templos en el país.',
   },
   {
     id: 'rel-15',
     tier: 4,
     topic: 'religion',
     effects: { rel: 2 },
-    text: 'La religión debería quedarse en el ámbito privado, fuera de la política.',
+    text: 'La religión debería mantenerse fuera de la política.',
   },
   {
     id: 'rel-16',

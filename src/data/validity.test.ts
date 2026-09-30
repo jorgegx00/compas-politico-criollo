@@ -1,5 +1,5 @@
 // Validez (docs/PLAN.md §10): si alguien responde "como" un perfil clave, ese perfil debe quedar en el top 3 de su
-// categoría en los modos 128 y 256.
+// categoría en los modos 130 y 260.
 import { describe, expect, it } from 'vitest';
 import { topMatches } from '../engine/matching.ts';
 import { questionsForMode } from '../engine/modes.ts';
@@ -10,7 +10,7 @@ import { QUESTIONS } from './questions/index.ts';
 import { REQUIRED_PROFILE_IDS } from './validate.ts';
 
 describe('validez', () => {
-  for (const mode of [128, 256] as const) {
+  for (const mode of [130, 260] as const) {
     const questions = questionsForMode(QUESTIONS, mode);
     for (const id of REQUIRED_PROFILE_IDS) {
       it(`modo ${mode}: ${id} queda en el top 3 de su categoría`, () => {

@@ -48,6 +48,13 @@ export const geoQuestions: Question[] = [
     context:
       'A finales de septiembre de 2025 RD, como anfitriona, dejó fuera a esos tres gobiernos. En noviembre aplazó la Cumbre a 2026.',
   },
+  {
+    id: 'geo-08',
+    tier: 2,
+    topic: 'eeuu-china',
+    effects: { geo: 2 },
+    text: 'Los dominicanos acusados de narcotráfico deberían ser juzgados en RD, no extraditados a EE.UU.',
+  },
   // Tier 3
   {
     id: 'geo-06',
@@ -68,13 +75,6 @@ export const geoQuestions: Question[] = [
       'Memorando no vinculante del 12-may-2026 ("Escudo de las Américas"): RD recibe en tránsito a deportados de terceros países, salvo haitianos y menores no acompañados.',
   },
   {
-    id: 'geo-08',
-    tier: 3,
-    topic: 'eeuu-china',
-    effects: { geo: 2 },
-    text: 'Los dominicanos acusados de narcotráfico deberían ser juzgados en RD, no extraditados a EE.UU.',
-  },
-  {
     id: 'geo-09',
     tier: 3,
     topic: 'eeuu-china',
@@ -90,6 +90,14 @@ export const geoQuestions: Question[] = [
     context:
       'La ONU creó en 2025 la Fuerza de Supresión de Pandillas para Haití (Resolución 2793). RD no envía tropas, pero da apoyo logístico, de inteligencia y humanitario.',
   },
+  {
+    id: 'geo-12',
+    tier: 3,
+    topic: 'estado-mercado',
+    effects: { geo: 3, eco: -1 },
+    text: 'RD debería salirse del DR-CAFTA si EE.UU. mantiene aranceles contra los productos dominicanos.',
+    context: 'DR-CAFTA: tratado de libre comercio entre EE.UU., Centroamérica y RD, vigente para RD desde 2007.',
+  },
   // Tier 4
   {
     id: 'geo-11',
@@ -99,14 +107,6 @@ export const geoQuestions: Question[] = [
     text: 'La intervención de EE.UU. en 1965 evitó que RD se convirtiera en otra Cuba.',
     context:
       'En abril de 1965 EE.UU. envió tropas durante la guerra civil entre constitucionalistas y "leales"; se retiraron en septiembre de 1966, tras las elecciones que ganó Balaguer.',
-  },
-  {
-    id: 'geo-12',
-    tier: 4,
-    topic: 'estado-mercado',
-    effects: { geo: 3, eco: -1 },
-    text: 'RD debería salirse del DR-CAFTA si EE.UU. mantiene aranceles contra los productos dominicanos.',
-    context: 'DR-CAFTA: tratado de libre comercio entre EE.UU., Centroamérica y RD, vigente para RD desde 2007.',
   },
   {
     id: 'geo-13',
@@ -120,7 +120,7 @@ export const geoQuestions: Question[] = [
     tier: 4,
     topic: 'desarrollo',
     effects: { geo: 2 },
-    text: 'RD debería aceptar préstamos y empresas chinas para construir grandes obras, aunque a EE.UU. le preocupe.',
+    text: 'RD debería aceptar préstamos de China para construir grandes obras, aunque a EE.UU. le preocupe.',
   },
   {
     id: 'geo-15',

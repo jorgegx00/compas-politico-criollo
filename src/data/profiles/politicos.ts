@@ -1,6 +1,7 @@
 // Políticos (docs/PLAN.md §11.3, con las revisiones del dossier 11). Justificaciones y fuentes completas en
 // docs/investigacion/: 02-elecciones-2024-partidos.md, 03-outsiders-religion-progresismo-periodistas-metodologia.md,
-// 05-comunicadores.md (Guido Gómez Mazara, Pedro Jiménez, Vinicio Castillo, Carlos Peña) y 11-huecos-posiciones.md.
+// 05-comunicadores.md (Guido Gómez Mazara, Pedro Jiménez, Vinicio Castillo, Carlos Peña), 11-huecos-posiciones.md y
+// 24-izquierda-radical.md (Isa Conde, Manuel Salazar, Miguel Mejía y Fulgencio Severino).
 // `eti` puntúa el discurso y las posiciones declaradas, no un juicio de conducta.
 // Confianza: `*` del PLAN → 'baja'; confianza explícita de los dossiers ('A'/'media-alta' → 'alta', 'baja' → 'baja').
 // Filas promediadas de dos dossiers (Vinicio Castillo: 02 y 05; Carlos Peña: 02 frente a 05 y 03; Ramfis: 03 y la
@@ -732,6 +733,132 @@ export const politicos: Profile[] = [
       {
         title: 'N Digital — Entregan útiles escolares a cientos de niños en la circunscripción 2 del DN',
         url: 'https://n.com.do/2025/08/25/entregan-utiles-escolares-a-cientos-de-ninos-en-circunscripcion-2-del-dn/',
+      },
+    ],
+    asOf: '2026-09',
+  },
+
+  // ——— Izquierda radical (dossier 24) ———
+  {
+    id: 'pol-narciso-isa-conde',
+    name: 'Narciso Isa Conde',
+    kind: 'politico',
+    subtitle: 'Partido del Poder Popular (2026) · exdirigente del PCD y de Fuerza de la Revolución',
+    summary:
+      'Cofundador del PCD (1965) y su candidato presidencial en 1978, 1982 y 1986; luego dirigió Fuerza de la Revolución y el Movimiento Caamañista, fusionados en 2026 en el Partido del Poder Popular. Pide la salida de las tropas de EE.UU., defiende a Cuba, Venezuela y Nicaragua frente a las "democracias liberales", rechaza el racismo antihaitiano y la minería, y apoya las tres causales y el Estado laico.',
+    scores: { eco: -95, soc: -90, mig: 70, ide: 80, rel: 80, val: 75, ord: 60, pod: -40, eti: 65, geo: 100, des: 85, est: 95 },
+    confidence: { eco: 'alta', mig: 'alta', ide: 'alta', rel: 'alta', val: 'alta', geo: 'alta', des: 'alta', est: 'alta' },
+    sources: [
+      {
+        title: 'El Nacional — Izquierdistas se unen y forman el Partido del Poder Popular (jun-2026)',
+        url: 'https://elnacional.com.do/politica/izquierdistas-unen-forman-partido-popular-encabezado-narciso-isa-conde_574192.html',
+      },
+      {
+        title: 'Aporrea — Isa Conde: Cuba, Nicaragua y Venezuela como "fortalezas sitiadas" (feb-2026)',
+        url: 'https://www.aporrea.org/internacionales/a349835.html',
+      },
+      {
+        title: 'Kaos en la Red — Isa Conde: de la bendición de Pompeo al fascismo de Trump (sep-2026)',
+        url: 'https://kaosenlared.net/republica-dominicana-de-la-bendicion-de-pompeo-al-fascismo-de-trump/',
+      },
+      {
+        title: 'Kaos en la Red — Isa Conde sobre la ocupación de Haití y el racismo antihaitiano (ago-2026)',
+        url: 'https://kaosenlared.net/haiti-actual-punteo-del-impacto-de-la-ocupacion-imperial/',
+      },
+      {
+        title: 'AlMomento — Organizaciones repudian la deportación masiva de haitianos (oct-2024)',
+        url: 'https://almomento.net/organizaciones-de-rd-repudian-deportacion-masiva-de-haitianos/',
+      },
+      { title: 'PDBA Georgetown — Elecciones presidenciales de 1982', url: 'https://pdba.georgetown.edu/Elecdata/DomRep/drpres82.html' },
+      { title: 'Diccionario Funglode — Narciso Isa Conde', url: 'https://diccionario.funglode.org/isa-conde-narciso/' },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'pol-manuel-salazar',
+    name: 'Manuel Salazar',
+    kind: 'politico',
+    subtitle: 'Exsecretario general del Partido Comunista del Trabajo (1994–2026) · columnista',
+    summary:
+      'Economista y columnista de Acento. Fue secretario general del Partido Comunista del Trabajo (PCT) de 1994 a febrero de 2026. Propone una Asamblea Constituyente y una candidatura unitaria de izquierda para 2028, defiende a Cuba frente a EE.UU., celebró la paralización de la mina Romero y critica el rechazo a las tres causales.',
+    scores: { eco: -85, soc: -80, mig: 50, ide: 45, rel: 50, val: 60, ord: 30, pod: -10, eti: 60, geo: 95, des: 65, est: 40 },
+    confidence: { rel: 'baja', ord: 'baja', pod: 'baja', geo: 'alta' },
+    sources: [
+      {
+        title: 'Acento — Manuel Salazar: La democracia dominicana en retroceso (jun-2026)',
+        url: 'https://acento.com.do/opinion/la-democracia-dominicana-en-retroceso-9697981.html',
+      },
+      {
+        title: 'Acento — Manuel Salazar: Cuba es el eslabón vital y hay que darle más solidaridad (jun-2026)',
+        url: 'https://acento.com.do/opinion/cuba-es-el-eslabon-vital-y-hay-que-darle-mas-solidaridad-9693465.html',
+      },
+      {
+        title: 'Acento — Manuel Salazar: La opción necesaria, con quiénes y cómo (jul-2026)',
+        url: 'https://acento.com.do/opinion/la-opcion-necesaria-con-quienes-y-como-9727384.html',
+      },
+      {
+        title: 'Acento — Manuel Salazar: San Juan de la Maguana, triunfo de la lucha organizada (may-2026)',
+        url: 'https://acento.com.do/opinion/san-juan-de-la-maguana-triunfo-lucha-organizada-es-victoria-asegurada-9672691.html',
+      },
+      {
+        title: 'Acento — El PCT elige a Aquiles Castro secretario general en su XI Congreso (feb-2026)',
+        url: 'https://acento.com.do/politica/partido-comunista-del-trabajo-elige-a-aquiles-castro-como-nuevo-secretario-general-en-su-xi-congreso-nacional-9623627.html',
+      },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'pol-miguel-mejia',
+    name: 'Miguel Mejía',
+    kind: 'politico',
+    subtitle: 'Movimiento Izquierda Unida · exministro sin cartera (destituido en enero de 2025)',
+    summary:
+      'Secretario general del Movimiento Izquierda Unida (MIU), aliado del PLD durante unos 30 años. Fue ministro sin cartera hasta enero de 2025, cuando Abinader lo destituyó tras criticar la recepción a Edmundo González. Defiende a Cuba, Venezuela y China. En migración apoyó que el Gobierno rechazara crear campos de refugiados para haitianos y habla de "dos naciones con realidades distintas".',
+    scores: { eco: -55, soc: -60, mig: -25, ide: -35, rel: 20, val: 10, ord: 0, pod: -30, eti: 10, geo: 95, des: 35, est: -35 },
+    confidence: { soc: 'baja', rel: 'baja', val: 'baja', ord: 'baja', eti: 'baja', geo: 'alta' },
+    sources: [
+      {
+        title: 'Listín Diario — Miguel Mejía, ministro sin cartera, destituido por Abinader (ene-2025)',
+        url: 'https://listindiario.com/la-republica/gobierno/20250110/miguel-mejia-ministro-cartera-destituido-abinader_840890.html',
+      },
+      {
+        title: 'MIU — Líder político dominicano condena el bloqueo contra Cuba; posición sobre Haití (abr-2024)',
+        url: 'https://miu.do/lider-politico-dominicano-condena-bloqueo-estadounidense-contra-cuba/',
+      },
+      {
+        title: 'MIU — El MIU y el PCT presentan manifiesto por el rescate de la soberanía (jun-2025)',
+        url: 'https://miu.do/miu-y-pct-presentan-manifiesto-al-pais-por-el-rescate-de-la-soberania/',
+      },
+      { title: 'MIU — Liderazgo político vs populismo (sep-2026)', url: 'https://miu.do/liderazgo-politico-vs-populismo/' },
+      { title: 'MIU — Trump y la soberanía nacional (sep-2026)', url: 'https://miu.do/trump-y-la-soberania-nacional/' },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'pol-fulgencio-severino',
+    name: 'Fulgencio Severino',
+    kind: 'politico',
+    subtitle: 'Patria para Todos y Todas (MPT) · candidato presidencial en 2024 (0.06 %)',
+    summary:
+      'Cardiólogo y dirigente del MPT, candidato presidencial en 2024 (0.06 %). Propone impuestos progresivos, pensión universal, reforma agraria y un tope a los salarios públicos. Critica la privatización eléctrica, el endeudamiento y la minería sin regulación, y llama a rechazar a los partidos tradicionales.',
+    scores: { eco: -75, soc: -80, mig: 25, ide: 15, rel: 50, val: 55, ord: 20, pod: 40, eti: 70, geo: 30, des: 50, est: 55 },
+    confidence: { ide: 'baja', ord: 'baja', pod: 'baja', geo: 'baja' },
+    sources: [
+      {
+        title: 'Listín Diario — Fulgencio Severino, cardiólogo que busca ser presidente (may-2024)',
+        url: 'https://listindiario.com/la-republica/politica/20240516/fulgencio-severino-cruz-cardiologo-busca-presidente-republica_808555.html',
+      },
+      {
+        title: 'JCE — Plan de Gobierno 2024 del MPT/PPT (PDF)',
+        url: 'https://jce.gob.do/portaltransparencia/Repositorio/Vista-Escritorio?EntryId=29909&Command=Core_Download&Method=attachment',
+      },
+      {
+        title: 'Ciudad Oriental — Severino exige destituir a Celso Marranzini de la EDE (feb-2025)',
+        url: 'https://ciudadoriental.com/fulgencio-severino-exige-destitucion-de-celso-marranzini-de-la-ede-y-denuncia-colusion-con-generadores/',
+      },
+      {
+        title: 'Acento — Fulgencio Severino: El poder empresarial y los desafíos estructurales (jun-2025)',
+        url: 'https://acento.com.do/opinion/el-poder-empresarial-y-los-desafios-estructurales-9509037.html',
       },
     ],
     asOf: '2026-09',

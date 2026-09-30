@@ -64,9 +64,9 @@ export function Methodology() {
 
       <h2>Las preguntas</h2>
       <p>
-        El banco tiene 256 afirmaciones. Las versiones de 32, 64 y 128 son subconjuntos: cada versión incluye todas las
-        preguntas de la anterior. Cada eje tiene al menos 2, 5, 10 y 20 afirmaciones propias en las versiones de 32, 64,
-        128 y 256, y se presentan intercaladas para no agotar un tema seguido.
+        El banco tiene 260 afirmaciones. Las versiones de 40, 70 y 130 son subconjuntos: cada versión incluye todas las
+        preguntas de la anterior. Cada eje tiene al menos 3, 5, 10 y 21 afirmaciones propias en las versiones de 40, 70,
+        130 y 260, y se presentan intercaladas para no agotar un tema seguido.
       </p>
       <p>
         Las afirmaciones nombran sin rodeos los temas que dividen al país: deportaciones y el muro, los "intercambios de

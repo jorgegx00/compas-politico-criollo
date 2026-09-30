@@ -16,6 +16,16 @@ export const ideQuestions: Question[] = [
     text: 'En RD hay racismo contra los haitianos y sus descendientes.',
   },
   {
+    id: 'ide-08',
+    tier: 1,
+    topic: 'memoria-historica',
+    facet: 'haiti',
+    effects: { ide: 3 },
+    text: 'El Estado dominicano debería pedir perdón oficialmente a Haití por la matanza del Perejil de 1937.',
+    context:
+      'Matanza de haitianos en la zona fronteriza ordenada por Trujillo entre el 28 de septiembre y el 8 de octubre de 1937. El consenso académico estima entre 12,000 y 15,000 muertos.',
+  },
+  {
     id: 'ide-03',
     tier: 1,
     topic: 'haiti',
@@ -25,14 +35,6 @@ export const ideQuestions: Question[] = [
     context: 'En 2026 se propuso una ley para impedir que dominicanos de ascendencia haitiana aspiren a cargos electivos.',
   },
   // Tier 2
-  {
-    id: 'ide-04',
-    tier: 2,
-    topic: 'educacion',
-    facet: 'cultura',
-    effects: { ide: 2 },
-    text: 'Las escuelas deberían enseñar que la raíz africana de la cultura dominicana es tan importante como la española.',
-  },
   {
     id: 'ide-05',
     tier: 2,
@@ -49,6 +51,14 @@ export const ideQuestions: Question[] = [
     effects: { ide: 2, mig: 1 },
     text: 'Un dominicano de ascendencia haitiana es tan dominicano como cualquier otro.',
   },
+  {
+    id: 'ide-11',
+    tier: 2,
+    topic: 'identidad',
+    facet: 'cultura',
+    effects: { ide: -2 },
+    text: 'La herencia española es la base de la cultura dominicana.',
+  },
   // Tier 3
   {
     id: 'ide-01',
@@ -61,6 +71,14 @@ export const ideQuestions: Question[] = [
       'La idea del "plan de fusión" circula en el debate nacionalista: sostiene que potencias u organismos extranjeros buscan unificar la isla bajo un solo Estado.',
   },
   {
+    id: 'ide-04',
+    tier: 3,
+    topic: 'educacion',
+    facet: 'cultura',
+    effects: { ide: 2 },
+    text: 'Las escuelas deberían enseñar que la raíz africana de la cultura dominicana es tan importante como la española.',
+  },
+  {
     id: 'ide-07',
     tier: 3,
     topic: 'memoria-historica',
@@ -71,22 +89,12 @@ export const ideQuestions: Question[] = [
       'Política de la Era de Trujillo (1930–1961) para afirmar la cultura hispana en la frontera y asentar allí colonos, entre ellos españoles y japoneses. Formó parte del antihaitianismo como doctrina de Estado.',
   },
   {
-    id: 'ide-08',
-    tier: 3,
-    topic: 'memoria-historica',
-    facet: 'haiti',
-    effects: { ide: 3 },
-    text: 'El Estado dominicano debería pedir perdón oficialmente a Haití por la matanza del Perejil de 1937.',
-    context:
-      'Matanza de haitianos en la zona fronteriza ordenada por Trujillo entre el 28 de septiembre y el 8 de octubre de 1937. El consenso académico estima entre 12,000 y 15,000 muertos.',
-  },
-  {
     id: 'ide-09',
     tier: 3,
     topic: 'identidad',
     facet: 'haiti',
     effects: { ide: -2 },
-    text: 'El Estado debería pagar un bono por el tercer hijo de las madres dominicanas para compensar la natalidad haitiana.',
+    text: 'La política de natalidad del Estado debería buscar contrarrestar la natalidad haitiana.',
     context:
       'En abril de 2024, el candidato presidencial de GenS, Carlos Peña, propuso financiar el tercer hijo de las dominicanas. Lo justificó en que las dominicanas tienen dos hijos y las extranjeras, sobre todo haitianas, entre cinco y siete.',
   },
@@ -99,14 +107,6 @@ export const ideQuestions: Question[] = [
     text: "Llamar 'indio' al color de piel de los dominicanos es una forma de negar la raíz africana.",
     context: "En RD se usa 'indio' para describir la piel morena.",
   },
-  {
-    id: 'ide-11',
-    tier: 3,
-    topic: 'identidad',
-    facet: 'cultura',
-    effects: { ide: -2 },
-    text: 'La herencia española es la base de la cultura dominicana.',
-  },
   // Tier 4
   {
     id: 'ide-12',
@@ -114,9 +114,9 @@ export const ideQuestions: Question[] = [
     topic: 'identidad',
     facet: 'religion',
     effects: { ide: 2 },
-    text: 'El vudú dominicano y el gagá son tan parte de la cultura dominicana como la fe católica.',
+    text: 'El vudú dominicano es tan parte de la cultura dominicana como la fe católica.',
     context:
-      "El vudú dominicano, también llamado 21 Divisiones, rinde culto a espíritus o 'misterios' asociados a santos católicos. El gagá es una fiesta de Semana Santa de origen afrocaribeño, propia de los bateyes.",
+      "El vudú dominicano, también llamado 21 Divisiones, rinde culto a espíritus o 'misterios' asociados a santos católicos.",
   },
   {
     id: 'ide-13',
@@ -149,7 +149,7 @@ export const ideQuestions: Question[] = [
     topic: 'educacion',
     facet: 'cultura',
     effects: { ide: 3 },
-    text: 'Las escuelas públicas de la zona fronteriza deberían enseñar creole haitiano.',
+    text: 'Las escuelas públicas de la zona fronteriza deberían enseñar creole haitiano como asignatura a todos sus estudiantes.',
   },
   {
     id: 'ide-17',
@@ -191,7 +191,7 @@ export const ideQuestions: Question[] = [
     topic: 'identidad',
     facet: 'raza',
     effects: { ide: -2 },
-    text: 'En RD no hay un problema de racismo, porque la mayoría somos mezclados.',
+    text: 'El mestizaje de la mayoría de los dominicanos evita que haya racismo en RD.',
     context:
       'En el censo de 2022 (población de 12 años o más), el 34.2 % se identificó como india, el 26.0 % como morena, el 18.7 % como blanca, el 7.7 % como mestiza, el 7.5 % como negra y el 3.8 % como mulata.',
   },

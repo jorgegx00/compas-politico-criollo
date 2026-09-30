@@ -1,16 +1,31 @@
 import type { Question } from '../types.ts';
 
-/** Eje primario mig (−: Nacionalismo / frontera dura, +: Apertura migratoria). Signo del efecto primario alternado desde +. */
+/** Eje primario mig (−: Nacionalismo / frontera dura, +: Apertura migratoria). */
 export const migQuestions: Question[] = [
   // Tier 1
+  {
+    id: 'mig-03',
+    tier: 1,
+    topic: 'haiti',
+    effects: { mig: 2 },
+    text: 'Los trabajadores haitianos de la construcción y la agricultura deberían recibir permisos de trabajo temporales legales.',
+  },
+  {
+    id: 'mig-04',
+    tier: 1,
+    topic: 'haiti',
+    effects: { mig: -2 },
+    text: 'El muro fronterizo debe cubrir toda la frontera con Haití.',
+    context: 'En abril de 2025 había unos 54 km de muro construidos y el Gobierno anunció 13 km más.',
+  },
   {
     id: 'mig-01',
     tier: 1,
     topic: 'haiti',
     effects: { mig: 3, ide: 1 },
-    text: 'Los hijos de haitianos nacidos y criados en RD deberían ser dominicanos.',
+    text: 'Los hijos de haitianos nacidos y criados en RD deberían ser dominicanos, aunque sus padres estuvieran en el país de forma irregular.',
     context:
-      'La Constitución de 2010 (art. 18) excluye de la nacionalidad a los hijos de extranjeros "en tránsito o que residan ilegalmente". La sentencia TC 168-13 aplicó ese criterio a los nacidos desde 1929.',
+      'Los hijos de extranjeros con residencia legal ya son dominicanos por nacimiento. La Constitución (art. 18.3) excluye a los hijos de extranjeros "que se hallen en tránsito o residan ilegalmente". La sentencia TC 168-13 aplicó ese criterio a los nacidos desde 1929.',
   },
   {
     id: 'mig-02',
@@ -20,22 +35,7 @@ export const migQuestions: Question[] = [
     text: 'Hay que deportar a todos los haitianos indocumentados, aunque lleven años trabajando aquí.',
     context: 'RD deportó a 276,215 personas en 2024 y a 379,553 en 2025.',
   },
-  {
-    id: 'mig-03',
-    tier: 1,
-    topic: 'haiti',
-    effects: { mig: 2 },
-    text: 'Los trabajadores haitianos de la construcción y la agricultura deberían recibir permisos de trabajo temporales legales.',
-  },
   // Tier 2
-  {
-    id: 'mig-04',
-    tier: 2,
-    topic: 'haiti',
-    effects: { mig: -2 },
-    text: 'El muro fronterizo debe cubrir toda la frontera con Haití.',
-    context: 'En abril de 2025 había unos 54 km de muro construidos y el Gobierno anunció 13 km más.',
-  },
   {
     id: 'mig-05',
     tier: 2,
@@ -48,7 +48,7 @@ export const migQuestions: Question[] = [
     tier: 2,
     topic: 'haiti',
     effects: { mig: -2, ide: -1 },
-    text: 'Hizo bien el Tribunal Constitucional con la sentencia TC 168-13.',
+    text: 'Hizo bien el Tribunal Constitucional en aplicar la sentencia TC 168-13 a los nacidos desde 1929.',
     context:
       'La TC 168-13 (23-sep-2013) dispuso que los hijos de extranjeros en situación irregular nacidos en RD desde 1929 no tienen derecho a la nacionalidad dominicana. Los afectados se estiman entre 22,673 y 210,000 personas.',
   },
@@ -122,7 +122,7 @@ export const migQuestions: Question[] = [
     tier: 4,
     topic: 'haiti',
     effects: { mig: 2 },
-    text: 'Las deportaciones masivas no reducen la inmigración haitiana, porque los deportados vuelven a cruzar.',
+    text: 'Las deportaciones masivas no reducen la inmigración haitiana.',
   },
   {
     id: 'mig-16',
@@ -153,7 +153,7 @@ export const migQuestions: Question[] = [
     tier: 4,
     topic: 'migracion-general',
     effects: { mig: 2, eco: 1 },
-    text: 'RD debería facilitar la residencia a los extranjeros que vengan a invertir o a trabajar en oficios que faltan.',
+    text: 'RD debería facilitar la residencia a los extranjeros que vengan a trabajar en oficios en los que faltan trabajadores.',
   },
   {
     id: 'mig-20',
@@ -174,6 +174,6 @@ export const migQuestions: Question[] = [
     tier: 4,
     topic: 'migracion-general',
     effects: { mig: -2 },
-    text: 'RD debería endurecer los requisitos de visa y residencia para los inmigrantes de cualquier país.',
+    text: 'RD debería endurecer los requisitos de residencia para los inmigrantes de cualquier país.',
   },
 ];

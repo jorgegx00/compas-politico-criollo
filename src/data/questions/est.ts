@@ -4,6 +4,13 @@ import type { Question } from '../types.ts';
 export const estQuestions: Question[] = [
   // Tier 1
   {
+    id: 'est-02',
+    tier: 1,
+    topic: 'sistema-partidos',
+    effects: { est: 2 },
+    text: 'Una figura mediática sin experiencia de gobierno, como un comunicador o un streamer, podría ser un buen presidente.',
+  },
+  {
     id: 'est-01',
     tier: 1,
     topic: 'sistema-partidos',
@@ -11,20 +18,13 @@ export const estQuestions: Question[] = [
     text: 'Prefiero un presidente con experiencia de Estado, aunque venga de un partido tradicional.',
   },
   {
-    id: 'est-02',
-    tier: 1,
-    topic: 'sistema-partidos',
-    effects: { est: 2 },
-    text: 'Una figura mediática sin experiencia de gobierno, como un comunicador o un streamer, podría ser un buen presidente.',
-  },
-  // Tier 2
-  {
     id: 'est-03',
-    tier: 2,
+    tier: 1,
     topic: 'sistema-partidos',
     effects: { est: -2 },
     text: 'Los partidos políticos, con todos sus defectos, son indispensables para la democracia.',
   },
+  // Tier 2
   {
     id: 'est-04',
     tier: 2,
@@ -59,13 +59,6 @@ export const estQuestions: Question[] = [
       'Los partidos reconocidos por la Junta Central Electoral (JCE) reciben dinero del presupuesto público; algunos aspirantes proponen reducirlo o eliminarlo.',
   },
   {
-    id: 'est-08',
-    tier: 3,
-    topic: 'libertad-expresion',
-    effects: { est: 2 },
-    text: 'Los streamers y las redes sociales informan mejor al pueblo que los periódicos y noticieros tradicionales.',
-  },
-  {
     id: 'est-09',
     tier: 3,
     topic: 'libertad-expresion',
@@ -81,7 +74,21 @@ export const estQuestions: Question[] = [
     effects: { est: 2 },
     text: 'Todos los partidos tradicionales son igual de corruptos.',
   },
+  {
+    id: 'est-20',
+    tier: 3,
+    topic: 'sistema-partidos',
+    effects: { est: 3, pod: -1 },
+    text: 'Los cambios de fondo en RD no llegarán por las elecciones, sino por la lucha popular en las calles y las huelgas.',
+  },
   // Tier 4
+  {
+    id: 'est-08',
+    tier: 4,
+    topic: 'libertad-expresion',
+    effects: { est: 2 },
+    text: 'Los streamers y las redes sociales informan mejor al pueblo que los periódicos y noticieros tradicionales.',
+  },
   {
     id: 'est-11',
     tier: 4,
@@ -121,8 +128,8 @@ export const estQuestions: Question[] = [
     id: 'est-16',
     tier: 4,
     topic: 'estado-mercado',
-    effects: { est: 2, eco: 1 },
-    text: 'Me gustaría que un empresario exitoso, sin carrera política, gobernara el país como una empresa.',
+    effects: { est: 2 },
+    text: 'Me gustaría que un empresario exitoso, sin carrera política, fuera presidente del país.',
   },
   {
     id: 'est-17',
@@ -136,7 +143,7 @@ export const estQuestions: Question[] = [
     tier: 4,
     topic: 'libertad-expresion',
     effects: { est: 2 },
-    text: 'Los medios tradicionales defienden más los intereses de los partidos y los grandes empresarios que los del pueblo.',
+    text: 'Los medios tradicionales defienden más los intereses de los partidos que los del pueblo.',
   },
   {
     id: 'est-19',
@@ -146,13 +153,6 @@ export const estQuestions: Question[] = [
     text: 'Habría que endurecer los requisitos para inscribir partidos nuevos, para evitar partidos de un solo líder.',
     context:
       'Para que la JCE reconozca un partido nuevo hay que reunir decenas de miles de firmas; en 2026 se exigían unas 82,000–90,000.',
-  },
-  {
-    id: 'est-20',
-    tier: 4,
-    topic: 'libertad-expresion',
-    effects: { est: 2 },
-    text: 'Los comunicadores que denuncian a los políticos en sus programas hacen más por el país que la oposición.',
   },
   {
     id: 'est-21',

@@ -5,6 +5,8 @@
 // perfil (PRD, MPT, Justicia Social); los ⚠️ del dossier 02 en Dominicanos Primero → 'baja'. El PPP tiene
 // confianza media en eco, mig, eti, geo y est con la evidencia fechada del dossier 18.
 // Patria Libre copia la fila de Fernando Abreu (§11.3) con la confianza un escalón más baja ('baja' en todo).
+// Izquierda radical (dossier 24-izquierda-radical.md, §11.13): PCT, MPD de hoy, MST y MIU; el PCD en dos etapas
+// (1944–1977 y legal 1977–1996). El PPP sube a confianza media (alta en geo) con las columnas de Isa Conde.
 import type { AxisId, Confidence, Profile } from '../types.ts';
 
 /** Perfiles con confianza baja o muy baja en todo: solo aparecen en "Explorar". */
@@ -252,11 +254,11 @@ export const partidos: Profile[] = [
     id: 'par-frente-amplio',
     name: 'Frente Amplio (FA)',
     kind: 'partido',
-    subtitle: 'Izquierda · María Teresa Cabrera · 0.14 % en 2024',
+    subtitle: 'Izquierda · ex MIUCA, vehículo electoral del PCT · María Teresa Cabrera · 0.14 % en 2024',
     summary:
-      'Partido de izquierda. En 2020 proclamó a Abinader como su candidato y en 2024 fue en alianza congresual con el PRM, aunque llevó candidata propia: María Teresa Cabrera (0.14 %), que propuso un Congreso unicameral, una Constituyente y devolver al Estado las empresas privatizadas. En 2025 rechazó que EE.UU. usara San Isidro y Las Américas; en 2026 dijo que no es aliado del PRM "desde las elecciones de 2020".',
-    scores: { eco: -70, soc: -75, mig: 30, ide: 45, rel: 60, val: 65, ord: 50, pod: 70, eti: 65, geo: 65, des: 45, est: 10 },
-    confidence: { soc: 'alta', mig: 'baja', ide: 'baja', rel: 'alta', pod: 'alta' },
+      'Nació como MIUCA (1992), frente electoral del PCT, y se llama Frente Amplio desde 2011. Proclamó a Abinader en 2020 y en 2024 fue en alianza congresual con el PRM, con candidata propia: María Teresa Cabrera (0.14 %), que propuso una Constituyente y devolver al Estado las empresas privatizadas. En 2025 rechazó que EE.UU. usara San Isidro y en enero de 2026 encabezó la protesta por la captura de Maduro.',
+    scores: { eco: -70, soc: -75, mig: 30, ide: 45, rel: 60, val: 45, ord: 50, pod: 70, eti: 65, geo: 80, des: 45, est: 10 },
+    confidence: { soc: 'alta', mig: 'baja', ide: 'baja', rel: 'alta', val: 'baja', pod: 'alta' },
     sources: [
       {
         title: 'JCE — Plan de Gobierno 2024 del Frente Amplio, parte 1 de 2 (PDF)',
@@ -286,6 +288,14 @@ export const partidos: Profile[] = [
         title: 'Diario Libre — El Frente Amplio niega que los funcionarios designados sean sus miembros (feb-2026)',
         url: 'https://www.diariolibre.com/politica/partidos/2026/02/17/frente-amplio-niega-que-funcionarios-designados-sean-sus-miembros/3439657',
       },
+      {
+        title: 'Listín Diario — El Frente Amplio lidera la protesta por el encarcelamiento de Nicolás Maduro (ene-2026)',
+        url: 'https://listindiario.com/la-republica/20260104/frente-amplio-lidera-protesta-encarcelamiento-nicolas-maduro_888345.html',
+      },
+      {
+        title: 'Ciudad Oriental — El PCT se perfila con cuota de poder en SDE; origen del Frente Amplio (mar-2020)',
+        url: 'https://ciudadoriental.com/el-partido-comunista-del-trabajo-se-perfila-con-importante-cuota-de-poder-en-el-mayor-municipio-de-rd/',
+      },
     ],
     asOf: '2026-09',
   },
@@ -293,7 +303,7 @@ export const partidos: Profile[] = [
     id: 'par-mpt',
     name: 'Patria para Todos y Todas (MPT)',
     kind: 'partido',
-    subtitle: 'Izquierda · Fulgencio Severino · 0.06 % en 2024',
+    subtitle: 'Izquierda · Fulgencio Severino · 0.06 % en 2024 · perdió la personería tras esa elección',
     summary:
       'Su candidato Fulgencio Severino obtuvo 0.06 % en 2024 con un "Programa Mínimo" de unidad de izquierda (con PUC, PCML y REDES): Asamblea Constituyente, eliminar las AFP y las ARS, educación pública laica, aborto por tres causales "y por otras razones atendibles", fin de la "minería lesiva" y derechos para los migrantes junto con control de la migración ilegal.',
     scores: { eco: -60, soc: -75, mig: 15, ide: 10, rel: 50, val: 60, ord: 35, pod: 40, eti: 60, geo: 40, des: 65, est: 60 },
@@ -307,6 +317,10 @@ export const partidos: Profile[] = [
       {
         title: 'En Segundos — Las propuestas más osadas de los candidatos presidenciales',
         url: 'https://ensegundos.do/2024/05/15/las-propuestas-mas-osadas-de-los-candidatos-presidenciales/',
+      },
+      {
+        title: 'Listín Diario — Patria para Todos intentará recuperar su reconocimiento para 2028 (may-2024)',
+        url: 'https://listindiario.com/la-republica/20240522/patria-todos-intentara-recuperar-reconocimiento-politico-participar-sufragios-2028_809454.html',
       },
       JCE_2024,
     ],
@@ -456,9 +470,9 @@ export const partidos: Profile[] = [
     kind: 'partido',
     subtitle: 'Fundado en junio de 2026, sin reconocimiento de la JCE · Narciso Isa Conde',
     summary:
-      'Fusión de Fuerza de la Revolución y el Movimiento Caamañista (junio de 2026), encabezada por Narciso Isa Conde, que se propone "enfrentar el sistema imperante, el gobierno neocolonial del PRM-Abinader y las élites capitalistas". Sus organizaciones fundadoras exigieron en 2024 detener las deportaciones masivas de haitianos y llamaron a derrotar en la calle la reforma fiscal.',
-    scores: { eco: -95, soc: -90, mig: 65, ide: 70, rel: 80, val: 55, ord: 40, pod: -10, eti: 60, geo: 95, des: 70, est: 90 },
-    confidence: { soc: 'baja', ide: 'baja', rel: 'baja', val: 'baja', ord: 'baja', pod: 'baja', des: 'baja' },
+      'Fusión de Fuerza de la Revolución y el Movimiento Caamañista (junio de 2026), encabezada por Narciso Isa Conde, que se propone "enfrentar el sistema imperante" y "crear poder popular, primero como poder paralelo". Sus organizaciones fundadoras exigieron en 2024 detener las deportaciones masivas de haitianos y llamaron a derrotar en la calle la reforma fiscal.',
+    scores: { eco: -95, soc: -90, mig: 70, ide: 80, rel: 80, val: 70, ord: 55, pod: -35, eti: 60, geo: 95, des: 85, est: 90 },
+    confidence: { geo: 'alta' },
     sources: [
       {
         title: 'RD Música — De Alofoke hasta izquierdistas: los partidos que buscan ser parte del 2028',
@@ -476,6 +490,14 @@ export const partidos: Profile[] = [
       {
         title: 'Barrigaverde — Isa Conde cuestiona el alcance de la investigación de SeNaSa (sep-2026)',
         url: 'https://barrigaverde.net/narciso-isa-conde-cuestiona-alcance-de-investigacion-por-fraude-millonario-en-senasa/',
+      },
+      {
+        title: 'El Nacional — Izquierdistas se unen y forman el Partido del Poder Popular (jun-2026)',
+        url: 'https://elnacional.com.do/politica/izquierdistas-unen-forman-partido-popular-encabezado-narciso-isa-conde_574192.html',
+      },
+      {
+        title: 'Kaos en la Red — Isa Conde: de la bendición de Pompeo al fascismo de Trump (sep-2026)',
+        url: 'https://kaosenlared.net/republica-dominicana-de-la-bendicion-de-pompeo-al-fascismo-de-trump/',
       },
     ],
     asOf: '2026-09',
@@ -502,14 +524,153 @@ export const partidos: Profile[] = [
     asOf: '2026-09',
   },
 
+  // ——— Izquierda radical contemporánea (dossier 24) ———
+  {
+    id: 'par-pct',
+    name: 'Partido Comunista del Trabajo (PCT)',
+    kind: 'partido',
+    subtitle: 'Fundado en 1980 · marxista-leninista (CIPOML) · sin registro en la JCE · Aquiles Castro',
+    summary:
+      'Partido marxista-leninista fundado en 1980 como escisión del MPD y miembro de la CIPOML. Sin registro en la JCE, actúa en elecciones a través del Frente Amplio, con el que llamó a votar por Abinader en 2020. Desde 2025 rechaza el uso de San Isidro y Las Américas por EE.UU., defiende a Cuba y Venezuela, apoyó el paro de San Juan contra la mina Romero y busca una candidatura unitaria de izquierda para 2028.',
+    scores: { eco: -85, soc: -85, mig: 55, ide: 60, rel: 65, val: 70, ord: 65, pod: -15, eti: 60, geo: 95, des: 50, est: 45 },
+    confidence: { eco: 'alta', geo: 'alta' },
+    sources: [
+      {
+        title: 'CIPOML — Partido Comunista del Trabajo (PCT), República Dominicana',
+        url: 'https://www.cipoml.net/es/partido-comunista-del-trabajo-pct-republica-dominicana/',
+      },
+      {
+        title: 'Acento — El PCT elige a Aquiles Castro secretario general en su XI Congreso (feb-2026)',
+        url: 'https://acento.com.do/politica/partido-comunista-del-trabajo-elige-a-aquiles-castro-como-nuevo-secretario-general-en-su-xi-congreso-nacional-9623627.html',
+      },
+      {
+        title: 'Acento — Marxistas piden votar por Abinader y por los candidatos del Frente Amplio (jun-2020)',
+        url: 'https://acento.com.do/politica/marxistas-piden-votar-por-abinader-y-candidatos-del-frente-amplio-8832507.html',
+      },
+      {
+        title: 'Prensa Latina — El PCT condiciona el diálogo con el Gobierno a medidas en favor de las mayorías (abr-2026)',
+        url: 'https://www.prensa-latina.cu/2026/04/17/pct-condiciona-dialogo-en-dominicana-a-medidas-en-favor-de-mayorias/',
+      },
+      {
+        title: 'Lucha — Proclama por la Soberanía Nacional y los Derechos del Pueblo (feb-2026)',
+        url: 'https://lucha.com.do/proclama-por-la-soberania-nacional-y-los-derechos-del-pueblo/',
+      },
+      {
+        title: 'El Nacional — El PCT propone unificar a la izquierda para 2028 (jul-2026)',
+        url: 'https://elnacional.com.do/politica/pct-propone-unificar-izquierda-dominicana-candidatura-elecciones-2028_576206.html',
+      },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'par-mpd-actual',
+    name: 'Movimiento Popular Dominicano (MPD) hoy',
+    kind: 'partido',
+    subtitle: 'Facción de Fernando Hernández (2020–2026) · marxista-leninista · sin registro en la JCE',
+    summary:
+      'El MPD, fundado en La Habana en 1956, está dividido desde 2006; esta ficha es la facción de Fernando Hernández. Rechaza aliarse con PRM, PLD, FP, PRD o PRSC ("todos son hijos del imperio") y ve 2028 como una etapa de acumulación. Propone una "República Democrática y Popular" de transición al socialismo, una moratoria de la deuda externa y anular el contrato de Barrick, y defiende a Cuba y a Maduro.',
+    scores: { eco: -90, soc: -85, mig: 50, ide: 55, rel: 60, val: 65, ord: 50, pod: -25, eti: 75, geo: 100, des: 65, est: 80 },
+    confidence: { eco: 'alta', soc: 'baja', mig: 'baja', ide: 'baja', geo: 'alta', est: 'alta' },
+    sources: [
+      {
+        title: 'Acento — El MPD propone la unidad de las fuerzas progresistas para desplazar a la oligarquía (feb-2025)',
+        url: 'https://acento.com.do/politica/mpd-propone-la-unidad-de-las-fuerzas-progresistas-para-desplazar-del-poder-a-la-oligarquia-9460336.html',
+      },
+      {
+        title: 'Ciudad Oriental — En su 70 aniversario, el MPD ratifica su compromiso con las luchas del pueblo (feb-2026)',
+        url: 'https://ciudadoriental.com/en-su-70-aniversario-el-mpd-ratifica-su-compromiso-con-las-luchas-del-pueblo-dominicano/',
+      },
+      {
+        title: 'Acento — El MPD llama a forjar un frente de izquierda y denuncia entrega de soberanía (may-2026)',
+        url: 'https://acento.com.do/politica/mpd-llama-a-forjar-un-frente-de-izquierda-y-denuncia-entrega-de-soberania-9685014.html',
+      },
+      {
+        title: 'Prensa Latina — El MPD califica de crimen el proyecto minero Romero (abr-2026)',
+        url: 'https://www.prensa-latina.cu/2026/04/14/movimiento-popular-dominicano-califica-de-crimen-proyecto-minero/',
+      },
+      {
+        title: 'Vértice Crítico — El MPD plantea reconstruir la izquierda desde las bases (sep-2026)',
+        url: 'https://verticecritico.net/2026/09/24/mpd-plantea-reconstruir-la-izquierda-desde-las-bases-y-convertir-2028-en-un-proceso-de-acumulacion-popular/',
+      },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'par-mst',
+    name: 'Movimiento Socialista de Trabajadoras y Trabajadores (MST)',
+    kind: 'partido',
+    subtitle: 'Trotskista (UIT-CI) · sin registro en la JCE · no se presenta a elecciones',
+    summary:
+      'Grupo trotskista, sección dominicana de la UIT-CI, que edita La Voz de los Trabajadores. Propone nacionalizar las multinacionales, reestatizar la electricidad, disolver la Policía Nacional, regularizar a los migrantes haitianos y legalizar el aborto. Se opone a la política de EE.UU. y también critica a Maduro, Ortega, Rusia y China. En 2024 llamó a votar por el MPT.',
+    scores: { eco: -95, soc: -90, mig: 95, ide: 95, rel: 85, val: 95, ord: 90, pod: 35, eti: 75, geo: 75, des: 90, est: 90 },
+    confidence: { eco: 'alta', mig: 'alta', ide: 'alta', val: 'alta', ord: 'alta', geo: 'alta', des: 'alta', est: 'alta' },
+    sources: [
+      { title: 'MST — Quiénes somos', url: 'https://mst-rd.org/quienes-somos/' },
+      { title: 'MST — Maduro y su falso socialismo (jul-2025)', url: 'https://mst-rd.org/2025/07/21/maduro-y-su-falso-socialismo/' },
+      {
+        title: 'MST — Por un verdadero plan de regularización sin discriminación (jun-2025)',
+        url: 'https://mst-rd.org/2025/06/03/por-un-verdadero-plan-de-regularizacion-sin-discriminacion/',
+      },
+      {
+        title: 'MST — El apagón nacional demuestra el fracaso de la privatización eléctrica (nov-2025)',
+        url: 'https://mst-rd.org/2025/11/12/el-apagon-nacional-demuestra-el-fracaso-de-la-privatizacion-de-la-industria-electrica/',
+      },
+      {
+        title: 'MST — Estalla el descontento contra el gobierno: luchemos por un cambio revolucionario (jul-2026)',
+        url: 'https://mst-rd.org/2026/07/18/estalla-el-descontento-contra-el-gobierno-y-el-neofascismo-pesca-en-rio-revuelto-luchemos-por-un-cambio-revolucionario/',
+      },
+      { title: 'MST — El MST ante las elecciones de 2024 (dic-2023)', url: 'https://mst-rd.org/2023/12/08/el-mst-ante-las-elecciones-de-2024/' },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'par-miu',
+    name: 'Movimiento Izquierda Unida (MIU)',
+    kind: 'partido',
+    subtitle: 'Escisión del MPD (1982) · Miguel Mejía · aliado del PLD durante tres décadas',
+    summary:
+      'Escisión del MPD (1982) que dirige Miguel Mejía, aliada del PLD durante unas tres décadas; en 2024 no participó. Mejía fue ministro sin cartera hasta enero de 2025, cuando Abinader lo destituyó tras criticar la recepción a Edmundo González. El MIU defiende a Cuba, Venezuela y China, propone un frente nacional por la soberanía frente a EE.UU. y respalda una verja fronteriza "con control civil".',
+    scores: { eco: -45, soc: -45, mig: -25, ide: -20, rel: 15, val: 10, ord: 25, pod: -35, eti: 15, geo: 95, des: 35, est: -40 },
+    confidence: {
+      eco: 'baja',
+      soc: 'baja',
+      ide: 'baja',
+      rel: 'baja',
+      val: 'baja',
+      ord: 'baja',
+      eti: 'baja',
+      geo: 'alta',
+    },
+    sources: [
+      {
+        title: 'MIU — Izquierda Unida propone verja fronteriza con control civil (may-2025)',
+        url: 'https://miu.do/izquierda-unida-propone-verja-fronteriza-con-control-civil-y-de-vision-integradora/',
+      },
+      { title: 'MIU — Decidimos preservarnos (feb-2024)', url: 'https://miu.do/decidimos-preservarnos/' },
+      {
+        title: 'MIU — El MIU y el PCT presentan manifiesto por el rescate de la soberanía (jun-2025)',
+        url: 'https://miu.do/miu-y-pct-presentan-manifiesto-al-pais-por-el-rescate-de-la-soberania/',
+      },
+      {
+        title: 'Diario Libre — Lo que dice Miguel Mejía sobre su destitución (ene-2025)',
+        url: 'https://www.diariolibre.com/politica/gobierno/2025/01/12/lo-que-dice-miguel-mejia-sobre-su-destitucion/2965073',
+      },
+      {
+        title: 'Hoy — El MIU sigue en el gobierno del PLD y aspira a un gobierno socialista (2015)',
+        url: 'https://hoy.com.do/miu-sigue-en-gobierno-del-pld-aspira-a-un-gobierno-socialista/',
+      },
+    ],
+    asOf: '2026-09',
+  },
+
   // ——— Históricos (§11.4; rel/val/est relativos a su época) ———
   {
     id: 'par-1j4',
     name: 'Movimiento Revolucionario 14 de Junio (1J4)',
     kind: 'partido',
-    subtitle: 'Años 60 · Manolo Tavárez Justo y Minerva Mirabal',
+    subtitle: '1960–1968 · Manolo Tavárez Justo y Minerva Mirabal',
     summary:
-      'Movimiento surgido tras las expediciones antitrujillistas de junio de 1959 y dirigido por Manolo Tavárez Justo y Minerva Mirabal. Pasó de un programa nacional-democrático al marxismo-leninismo y en 1963, tras el golpe contra Bosch, se alzó en guerrillas (Las Manaclas). De sus divisiones salieron grupos maoístas.',
+      'Movimiento surgido tras las expediciones antitrujillistas de junio de 1959 y dirigido por Manolo Tavárez Justo y Minerva Mirabal. Llamó a la abstención en 1962, pasó de un programa nacional-democrático al marxismo-leninismo y en 1963, tras el golpe contra Bosch, se alzó en guerrillas (Las Manaclas). De sus divisiones salió la Línea Roja maoísta (1968), origen de la UPA y del PTD.',
     scores: { eco: -60, soc: -60, mig: 0, ide: 30, rel: 40, val: 40, ord: 0, pod: 40, eti: 70, geo: 90, des: 0, est: 100 },
     relativeToEra: true,
     sources: [
@@ -525,14 +686,35 @@ export const partidos: Profile[] = [
   },
   {
     id: 'par-mpd',
-    name: 'Movimiento Popular Dominicano (MPD)',
+    name: 'Movimiento Popular Dominicano (MPD), 1956–1978',
     kind: 'partido',
-    subtitle: 'Años 60 y 70 · Maximiliano Gómez ("El Moreno")',
+    subtitle: '1956–1978 · maoísta · Maximiliano Gómez ("El Moreno")',
     summary:
-      'Organización maoísta partidaria de la lucha armada, con dirigentes como Maximiliano Gómez ("El Moreno"). Se opuso a los gobiernos de Balaguer y a la influencia de Estados Unidos en los años 60 y 70.',
-    scores: { eco: -100, soc: -90, mig: 20, ide: 40, rel: 80, val: 50, ord: -30, pod: -20, eti: 60, geo: 100, des: -20, est: 100 },
+      'Fundado en La Habana el 20 de febrero de 1956 por exiliados antitrujillistas encabezados por Máximo López Molina. Tras 1965 adoptó el maoísmo y la "guerra popular prolongada"; su secretario general Maximiliano Gómez murió en Bruselas en 1971. En 1976 proponía una "revolución nacional democrática" dirigida por la clase obrera "a través de su Partido", como paso al socialismo y al comunismo.',
+    scores: { eco: -100, soc: -90, mig: 20, ide: 40, rel: 80, val: 50, ord: -40, pod: -40, eti: 60, geo: 100, des: -20, est: 100 },
+    confidence: {
+      eco: 'alta',
+      soc: 'baja',
+      mig: 'baja',
+      ide: 'baja',
+      rel: 'baja',
+      val: 'baja',
+      eti: 'baja',
+      geo: 'alta',
+      des: 'baja',
+      est: 'alta',
+    },
     relativeToEra: true,
     sources: [
+      {
+        title: 'MPD — Documento de la Dirección Nacional "Pablo Martínez" (oct-1976), en marxists.org (PDF)',
+        url: 'https://www.marxists.org/espanol/tematica/repdom/docs/mpd/mpd-4octubre1976.pdf',
+      },
+      { title: 'Hoy — La Guardia Roja en la división del MPD (2019)', url: 'https://hoy.com.do/la-guardia-roja-en-la-division-del-mpd/' },
+      {
+        title: 'Listín Diario — La izquierda también tuvo sus paredones (2021)',
+        url: 'https://listindiario.com/la-republica/2021/06/01/672920/la-izquierda-tambien-tuvo-sus-paredones.html',
+      },
       { title: 'Wikipedia (inglés) — Maximiliano Gómez', url: 'https://en.wikipedia.org/wiki/Maximiliano_G%C3%B3mez' },
       {
         title: 'Acento — Apuntes para la historia de los partidos dominicanos',
@@ -542,16 +724,63 @@ export const partidos: Profile[] = [
   },
   {
     id: 'par-pcd',
-    name: 'Partido Comunista Dominicano (PCD)',
+    name: 'PSP y Partido Comunista Dominicano en la clandestinidad (1944–1977)',
     kind: 'partido',
-    subtitle: 'Desde 1944 · PSP de 1946 a 1965 y PCD desde 1965 · prosoviético',
+    subtitle: '1944–1977 · PSP desde 1946, PCD desde 1965 · prosoviético y clandestino',
     summary:
-      'Partido prosoviético. Nació en 1944 como Partido Democrático Revolucionario Dominicano, fue Partido Socialista Popular (PSP) de 1946 a 1965 y PCD desde agosto de 1965. Los hermanos Antonio y Narciso Isa Conde fueron dirigentes posteriores, no fundadores.',
-    scores: { eco: -100, soc: -90, mig: 40, ide: 50, rel: 80, val: 60, ord: -20, pod: -20, eti: 60, geo: 100, des: -10, est: 90 },
+      'Nació el 27 de febrero de 1944 como Partido Revolucionario Democrático Dominicano y fue Partido Socialista Popular (PSP) desde 1946. Proscrito bajo Trujillo, pidió la abstención en 1962 y combatió en 1965. En agosto de 1965 una escisión, con Narciso y Antonio Isa Conde entre sus fundadores, formó el PCD, que siguió en la clandestinidad bajo Balaguer.',
+    scores: { eco: -100, soc: -90, mig: 45, ide: 60, rel: 80, val: 60, ord: -20, pod: -35, eti: 60, geo: 100, des: -10, est: 95 },
+    confidence: { soc: 'baja', rel: 'baja', val: 'baja', ord: 'baja', eti: 'baja', des: 'baja' },
     relativeToEra: true,
     sources: [
+      {
+        title: 'PCD — "Una repatriación incalificable" (may-1977), en marxists.org (PDF)',
+        url: 'https://www.marxists.org/espanol/tematica/repdom/docs/pcd158-1.pdf',
+      },
+      {
+        title: 'PSP — Declaración ante la comisión de la OEA (may-1965), en marxists.org (PDF)',
+        url: 'https://www.marxists.org/espanol/tematica/repdom/docs/psp/psp1965.pdf',
+      },
+      {
+        title: 'Listín Diario — El ocaso de la izquierda (2023)',
+        url: 'https://listindiario.com/la-republica/2023/02/23/764125/el-ocaso-de-la-izquierda.html',
+      },
+      {
+        title: 'Primicias — 82 aniversario de la fundación del primer partido comunista en RD (mar-2026)',
+        url: 'https://primicias.net/web/conmemoran-con-ofrenda-floral-82-aniversario-de-la-fundacion-del-primer-partido-comunista-en-rd/',
+      },
       { title: 'Wikipedia (inglés) — Dominican Communist Party', url: 'https://en.wikipedia.org/wiki/Dominican_Communist_Party' },
       { title: 'Diccionario Funglode — Narciso Isa Conde', url: 'https://diccionario.funglode.org/isa-conde-narciso/' },
+    ],
+  },
+  {
+    id: 'par-pcd-legal',
+    name: 'Partido Comunista Dominicano (PCD) legal (1977–1996)',
+    kind: 'partido',
+    subtitle: '1977–1996 · Narciso Isa Conde · candidato presidencial en 1978, 1982 y 1986',
+    summary:
+      'Legalizado por la Ley 692 de 1977, fue el primer partido comunista en unas elecciones dominicanas: Isa Conde sacó 0.59 % en 1978 y 1.01 % en 1982, en alianza con el MPS. Su programa de 1984 proponía socializar las grandes empresas, una "democracia socialista" con libertad de partidos, legalizar el aborto y una política de amistad con Haití. En 1996 se fusionó en Fuerza de la Revolución, antecesora del PPP.',
+    scores: { eco: -95, soc: -90, mig: 45, ide: 70, rel: 70, val: 90, ord: 10, pod: -10, eti: 70, geo: 100, des: -25, est: 70 },
+    confidence: { eco: 'alta', ide: 'alta', rel: 'alta', val: 'alta', ord: 'baja', geo: 'alta' },
+    relativeToEra: true,
+    sources: [
+      {
+        title: 'AGN — Programa del PCD aprobado en su III Congreso (1984)',
+        url: 'https://colecciones.agn.gob.do/opac/ficha.php?informatico=00167549PI&codopac=OP003',
+      },
+      {
+        title: 'PCD — Manifiesto ante el gobierno del PRD (ago-1982), en marxists.org (PDF)',
+        url: 'https://www.marxists.org/espanol/tematica/repdom/docs/pcd/pcd-manifiesto-agosto1982.pdf',
+      },
+      {
+        title: 'IDEA — Regulación jurídica de los partidos políticos en la República Dominicana (Ley 692 de 1977)',
+        url: 'https://www.idea.int/sites/default/files/publications/chapters/regulacion-juridica-de-los-partidos-politicos-en-america-latina/regulacion-juridica-de-los-partidos-politicos-ena-america-latina-rep-dominicana-16.pdf',
+      },
+      { title: 'PDBA Georgetown — Elecciones presidenciales de 1982', url: 'https://pdba.georgetown.edu/Elecdata/DomRep/drpres82.html' },
+      {
+        title: 'Primicias — 82 aniversario de la fundación del primer partido comunista en RD (mar-2026)',
+        url: 'https://primicias.net/web/conmemoran-con-ofrenda-floral-82-aniversario-de-la-fundacion-del-primer-partido-comunista-en-rd/',
+      },
     ],
   },
   {

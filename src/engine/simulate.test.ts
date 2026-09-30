@@ -22,7 +22,7 @@ describe('simulate', () => {
   });
 
   it('un perfil simulado queda primero entre varios candidatos', () => {
-    const bank = questionsForMode(syntheticBank([1, 1, 2, 4]), 128);
+    const bank = questionsForMode(syntheticBank([1, 1, 2, 4]), 130);
     const candidates = [
       makeProfile('prm', scoresFrom([25, -15, -55, -20, -25, -10, -15, 40, 25, -70, -5, -60])),
       makeProfile('op-dem', scoresFrom([-35, -55, 45, 50, 65, 85, 55, 60, 70, 25, 75, 35])),

@@ -1,15 +1,8 @@
 import type { Question } from '../types.ts';
 
-/** Eje primario `pod`: −100 = caudillismo / reelección, +100 = institucionalidad. Signo del efecto primario alterno (−, +, −…). */
+/** Eje primario `pod`: −100 = caudillismo / reelección, +100 = institucionalidad. */
 export const podQuestions: Question[] = [
   // Tier 1
-  {
-    id: 'pod-01',
-    tier: 1,
-    topic: 'reeleccion',
-    effects: { pod: -3 },
-    text: 'Un presidente que gobierna bien debería poder reelegirse todas las veces que el pueblo quiera.',
-  },
   {
     id: 'pod-02',
     tier: 1,
@@ -18,6 +11,21 @@ export const podQuestions: Question[] = [
     text: 'Hizo bien la reforma constitucional de 2024 en hacer imposible cambiar el límite a la reelección presidencial.',
     context:
       'La reforma de octubre de 2024 limita al presidente a dos periodos consecutivos, sin poder volver a optar nunca, y convierte esa regla en cláusula pétrea: ya no se puede reformar.',
+  },
+  {
+    id: 'pod-06',
+    tier: 1,
+    topic: 'reeleccion',
+    effects: { pod: 3 },
+    text: 'El presidente debería gobernar un solo periodo, sin posibilidad de reelección.',
+    context: 'Desde la reforma de 2024, la Constitución permite dos periodos presidenciales consecutivos y nunca más.',
+  },
+  {
+    id: 'pod-01',
+    tier: 1,
+    topic: 'reeleccion',
+    effects: { pod: -3 },
+    text: 'Un presidente que gobierna bien debería poder reelegirse todas las veces que el pueblo quiera.',
   },
   // Tier 2
   {
@@ -47,19 +55,11 @@ export const podQuestions: Question[] = [
   },
   // Tier 3
   {
-    id: 'pod-06',
-    tier: 3,
-    topic: 'reeleccion',
-    effects: { pod: 3 },
-    text: 'El presidente debería gobernar un solo periodo, sin posibilidad de reelección.',
-    context: 'Desde la reforma de 2024, la Constitución permite dos periodos presidenciales consecutivos y nunca más.',
-  },
-  {
     id: 'pod-07',
     tier: 3,
     topic: 'reeleccion',
     effects: { pod: -2 },
-    text: 'Un partido con mayoría en el Congreso puede aprobar leyes de urgencia sin buscar el consenso de la oposición.',
+    text: 'Está bien que un partido con mayoría en el Congreso apruebe leyes urgentes sin buscar el consenso de la oposición.',
   },
   {
     id: 'pod-08',
@@ -75,7 +75,7 @@ export const podQuestions: Question[] = [
     tier: 3,
     topic: 'libertad-expresion',
     effects: { pod: -2 },
-    text: 'Debería existir un organismo del Estado que regule los contenidos de los medios y las redes sociales.',
+    text: 'Debería existir un organismo del Estado que regule los contenidos de las redes sociales.',
     context:
       'En 2025 se propuso crear el INACOM, un regulador de medios, plataformas y espectáculos que sus críticos llamaron "ley mordaza". El proyecto perimió en julio de 2026.',
   },
@@ -88,13 +88,20 @@ export const podQuestions: Question[] = [
     context:
       'Los artículos de difamación e injuria del Código Penal (Ley 74-25) se llamaron "ley mordaza". La Ley 44-26 (julio de 2026) excluyó de la difamación las opiniones verificables sobre corrupción, pero el Senado rechazó, por 24 votos a 3, cambiar la cárcel por multas en la difamación simple.',
   },
+  {
+    id: 'pod-13',
+    tier: 3,
+    topic: 'reeleccion',
+    effects: { pod: -2 },
+    text: 'Un expresidente debería poder volver a ser candidato después de pasar un periodo fuera del poder.',
+  },
   // Tier 4
   {
     id: 'pod-11',
     tier: 4,
-    topic: 'reeleccion',
+    topic: 'sistema-partidos',
     effects: { pod: -3 },
-    text: 'El país necesita un líder fuerte más que instituciones fuertes.',
+    text: 'Un sistema de partido único, como el de Cuba, puede representar al pueblo mejor que la competencia entre varios partidos.',
   },
   {
     id: 'pod-12',
@@ -106,18 +113,11 @@ export const podQuestions: Question[] = [
       'Las altas cortes son la Suprema Corte de Justicia, el Tribunal Constitucional y el Tribunal Superior Electoral. Sus jueces los designa el Consejo Nacional de la Magistratura.',
   },
   {
-    id: 'pod-13',
-    tier: 4,
-    topic: 'reeleccion',
-    effects: { pod: -2 },
-    text: 'Un expresidente debería poder volver a ser candidato después de pasar un periodo fuera del poder.',
-  },
-  {
     id: 'pod-14',
     tier: 4,
     topic: 'memoria-historica',
     effects: { pod: 2 },
-    text: 'Las escuelas deberían enseñar en detalle la represión de la dictadura de Trujillo y de los 12 años de Balaguer.',
+    text: 'Las escuelas deberían enseñar en detalle la represión de los 12 años de Balaguer.',
     context: 'Los "12 años" son los gobiernos de Joaquín Balaguer de 1966 a 1978.',
   },
   {

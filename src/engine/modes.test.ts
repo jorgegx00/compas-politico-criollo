@@ -7,18 +7,19 @@ import { syntheticBank } from './testing.ts';
 const bank = syntheticBank([1, 1, 2, 4]);
 
 describe('modes', () => {
-  it('reconoce solo 32, 64, 128 y 256', () => {
+  it('reconoce solo 40, 70, 130 y 260', () => {
     expect(MODES.every(isMode)).toBe(true);
+    expect(isMode(64)).toBe(false);
     expect(isMode(48)).toBe(false);
     expect(isMode(248)).toBe(false);
   });
 
   it('cada modo incluye los tiers ≤ al suyo', () => {
-    expect(questionsForMode(bank, 32)).toHaveLength(12);
-    expect(questionsForMode(bank, 64)).toHaveLength(24);
-    expect(questionsForMode(bank, 128)).toHaveLength(48);
-    expect(questionsForMode(bank, 256)).toHaveLength(96);
-    expect(questionsForMode(bank, 64).every((x) => x.tier <= 2)).toBe(true);
+    expect(questionsForMode(bank, 40)).toHaveLength(12);
+    expect(questionsForMode(bank, 70)).toHaveLength(24);
+    expect(questionsForMode(bank, 130)).toHaveLength(48);
+    expect(questionsForMode(bank, 260)).toHaveLength(96);
+    expect(questionsForMode(bank, 70).every((x) => x.tier <= 2)).toBe(true);
   });
 
   it('cada modo corto está contenido en el siguiente', () => {
@@ -29,9 +30,9 @@ describe('modes', () => {
   });
 
   it('el orden es determinista e intercala ejes', () => {
-    const order = questionsForMode(bank, 256);
-    expect(questionsForMode(bank, 256).map((x) => x.id)).toEqual(order.map((x) => x.id));
-    expect(questionsForMode([...bank].reverse(), 256).map((x) => primaryAxis(x))).toEqual(
+    const order = questionsForMode(bank, 260);
+    expect(questionsForMode(bank, 260).map((x) => x.id)).toEqual(order.map((x) => x.id));
+    expect(questionsForMode([...bank].reverse(), 260).map((x) => primaryAxis(x))).toEqual(
       order.map((x) => primaryAxis(x)),
     );
     // Con ejes de igual tamaño, nunca salen dos preguntas seguidas del mismo eje.

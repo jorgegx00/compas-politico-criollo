@@ -1,6 +1,6 @@
 # Compás Político Criollo
 
-Test político tipo 8values/PolitiScales adaptado a la República Dominicana: 32/64/128/256 preguntas → 12 ejes
+Test político tipo 8values/PolitiScales adaptado a la República Dominicana: 40/70/130/260 preguntas → 12 ejes
 dominicanos → afinidad con gobiernos/periodos, partidos, políticos y figuras mediáticas/outsiders dominicanos, países
 extranjeros **por eje** y figuras históricas no dominicanas. Todo el contenido y la UI van en español.
 
@@ -10,24 +10,35 @@ extranjeros **por eje** y figuras históricas no dominicanas. Todo el contenido 
   pendiente (§12). Leerlo antes de trabajar.
 - **[`docs/investigacion/`](docs/investigacion/README.md)** — dossiers completos con justificaciones y fuentes.
 
-## Estado (2026-09-29, fin de la 3.ª sesión)
+## Estado (2026-09-30, fin de la 4.ª sesión)
 - **Fase 0** (documentación) ✅.
-- **Fase 1** (investigación) ✅ parcial: dossiers 01–23 en `docs/investigacion/`. El 22 rediseñó el eje `ide` y el 23
-  cubre a los Salcedo, Antigua Orden y Melymel. Lo pendiente está en `docs/PLAN.md` §12.
+- **Fase 1** (investigación) ✅ parcial: dossiers 01–24 en `docs/investigacion/`.
+  - El 22 rediseñó el eje `ide`.
+  - El 23 cubre a los Salcedo, Antigua Orden y Melymel.
+  - El 24 cubre la izquierda radical (partidos comunistas, dirigentes y movimientos) y la revisión del banco.
+  - Lo pendiente está en `docs/PLAN.md` §12.
 - **Fase 2** (app) ✅:
-  - banco de 256 preguntas (`src/data/questions/`);
-  - 244 perfiles más el Estado dominicano (`src/data/profiles/`);
+  - banco de 260 preguntas (`src/data/questions/`);
+  - 255 perfiles más el Estado dominicano (`src/data/profiles/`);
   - motor en `src/engine/`;
   - UI en `src/pages/` y `src/components/`.
 - **Fase 3** ✅:
   - revisión humana de todas las preguntas y perfiles;
   - eje `ide` con polos «Nación de herencia ↔ Nación cívica y plural» y desglose por facetas;
   - publicación preparada: `.github/workflows/deploy.yml` y `README.md`.
-- **Verificación:** `npm run test` (73 tests: motor, contenido y validez), `npm run typecheck` y `npm run build` en
+- **Fase 4** ✅ (2026-09-30):
+  - 11 perfiles de izquierda radical y 6 revisados;
+  - 6 preguntas para que el comunista y el socialdemócrata se separen por contenido;
+  - 39 preguntas dobles o ambiguas corregidas; regla nueva en `docs/PLAN.md` §6: «una sola afirmación, sin
+    condiciones escondidas»;
+  - modos de 40/70/130/260 (18 preguntas cambian de tier) y 4 preguntas nuevas: exenciones al turismo y a las zonas
+    francas, violencia de género y peleas de gallos.
+- **Verificación:** `npm run test` (76 tests: motor, contenido y validez), `npm run typecheck` y `npm run build` en
   verde. El recorrido en navegador se hizo con Playwright, sirviendo `dist/` bajo una subruta.
 - **Validar solo un archivo de contenido:** `npx vitest run src/data/content.test.ts -t "preguntas eco"` (o
   `-t "perfiles partidos"`).
 - **Siguiente:**
+  - revisión humana de las 47 preguntas tocadas en la Fase 4 (dossier 24, §1.5) y de los perfiles nuevos;
   - el usuario hace el commit, crea el repo en GitHub y activa Pages (Settings → Pages → *GitHub Actions*);
   - lo pendiente de §12.
 - **Commits:** los hace el usuario. Dejar el trabajo listo y no hacer `git commit` ni `push`.
@@ -36,7 +47,8 @@ extranjeros **por eje** y figuras históricas no dominicanas. Todo el contenido 
 
 ## Decisiones clave
 - Stack: Vite + React + TypeScript, SPA estática sin backend; HashRouter; gráficos en SVG propio; tests con Vitest.
-- Modos 32/64/128/256 anidados por tiers (cada modo corto ⊂ el siguiente).
+- Modos 40/70/130/260 anidados por tiers de 40/30/60/130 (cada modo corto ⊂ el siguiente; hasta el 2026-09-30 eran
+  32/64/128/256 y los enlaces `v=1` viejos se siguen leyendo).
 - Resultados compartibles por URL (12 puntajes codificados); nada se guarda en servidor.
 - Ejes (ids): `eco soc mig ide rel val ord pod eti geo des est`, puntajes −100..+100. Dos nacionalismos: antihaitiano
   (`mig`/`ide`) y antiestadounidense (`geo`). `mig` = qué hace el Estado con quien entra o reside; `ide` = quién es

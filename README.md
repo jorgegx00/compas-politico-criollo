@@ -1,6 +1,6 @@
 # Compás Político Criollo
 
-Test político tipo 8values/PolitiScales adaptado a la República Dominicana. Respondes 32, 64, 128 o 256 afirmaciones y
+Test político tipo 8values/PolitiScales adaptado a la República Dominicana. Respondes 40, 70, 130 o 260 afirmaciones y
 obtienes tu posición en **12 ejes** pensados para la política dominicana. Luego te compara con:
 - gobiernos y periodos, partidos, políticos y figuras mediáticas dominicanas;
 - países extranjeros, eje por eje;
@@ -108,7 +108,7 @@ Para validar un solo archivo de contenido:
 `npx vitest run src/data/content.test.ts -t "preguntas eco"` (o `-t "perfiles partidos"`).
 
 ## Estructura
-- `src/data/questions/`: banco de 256 preguntas, un archivo por eje.
+- `src/data/questions/`: banco de 260 preguntas, un archivo por eje.
 - `src/data/profiles/`: perfiles de referencia con puntajes, confianza y fuentes.
 - `src/data/facets.ts`: facetas del eje Identidad (pertenencia, raza, cultura, religión y Haití) para el desglose de
   Resultados.

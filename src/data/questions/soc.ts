@@ -1,6 +1,6 @@
 import type { Question } from '../types.ts';
 
-/** Eje primario soc (−: Estado protector, +: Responsabilidad individual). Signo del efecto primario alternado desde −. */
+/** Eje primario soc (−: Estado protector, +: Responsabilidad individual). */
 export const socQuestions: Question[] = [
   // Tier 1
   {
@@ -22,7 +22,7 @@ export const socQuestions: Question[] = [
     tier: 1,
     topic: 'pensiones-salud',
     effects: { soc: -3, eco: -1 },
-    text: 'La salud debería ser pública y gratuita para todos, sin ARS privadas.',
+    text: 'El seguro de salud debería administrarlo solo el Estado, sin ARS privadas.',
     context:
       'Las ARS (administradoras de riesgos de salud) gestionan el seguro familiar de salud creado por la Ley 87-01. Hay ARS públicas y privadas.',
   },
@@ -42,14 +42,14 @@ export const socQuestions: Question[] = [
     effects: { soc: -3 },
     text: 'Todo hogar pobre debería recibir del Estado un ingreso mensual, sin tener que cumplir condiciones.',
   },
-  // Tier 3
   {
     id: 'soc-06',
-    tier: 3,
+    tier: 2,
     topic: 'pensiones-salud',
     effects: { soc: 3, eco: 1 },
     text: 'La pensión de cada persona debería depender solo de lo que ahorró durante su vida laboral.',
   },
+  // Tier 3
   {
     id: 'soc-07',
     tier: 3,
@@ -76,7 +76,7 @@ export const socQuestions: Question[] = [
     tier: 3,
     topic: 'estado-mercado',
     effects: { soc: 2 },
-    text: 'Quien recibe ayudas del Gobierno debería estar obligado a trabajar o estudiar.',
+    text: 'Los adultos en edad de trabajar que reciben ayudas del Gobierno deberían estar obligados a trabajar o estudiar.',
   },
   {
     id: 'soc-11',
@@ -112,7 +112,7 @@ export const socQuestions: Question[] = [
     tier: 4,
     topic: 'trabajo',
     effects: { soc: -2 },
-    text: 'El Estado debería pagar un seguro de desempleo a quien pierda su trabajo.',
+    text: 'El Estado debería pagar con impuestos un seguro de desempleo a quien pierda su trabajo.',
   },
   {
     id: 'soc-16',
@@ -151,7 +151,7 @@ export const socQuestions: Question[] = [
     tier: 4,
     topic: 'estado-mercado',
     effects: { soc: 2, eco: 1 },
-    text: 'Las fundaciones y empresas privadas ayudan mejor a los pobres que los programas del Gobierno.',
+    text: 'La ayuda privada, como la de fundaciones o empresas, llega mejor a los pobres que los programas del Gobierno.',
   },
   {
     id: 'soc-21',

@@ -12,7 +12,7 @@ import { geoQuestions } from './geo.ts';
 import { desQuestions } from './des.ts';
 import { estQuestions } from './est.ts';
 
-/** Banco completo de 256 preguntas (un archivo por eje primario). */
+/** Banco completo de 260 preguntas (un archivo por eje primario). */
 export const QUESTIONS: readonly Question[] = [
   ...ecoQuestions,
   ...socQuestions,

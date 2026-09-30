@@ -1,30 +1,32 @@
 // Reglas de validación del contenido (docs/PLAN.md §6, §7 y §10). Devuelven listas de errores legibles.
-import { primaryAxis, type Mode } from '../engine/modes.ts';
+import { MODES, primaryAxis } from '../engine/modes.ts';
 import { AXIS_IDS } from './axes.ts';
 import { IDENTITY_FACETS } from './facets.ts';
 import { TOPICS, type TopicId } from './topics.ts';
 import type { AxisId, Profile, ProfileKind, Question } from './types.ts';
 
-/** Preguntas con eje primario en cada eje, por tier (1, 2, 3, 4). Acumulado: 32 / 64 / 128 / 256 en total. */
+/**
+ * Preguntas con eje primario en cada eje, por tier (1, 2, 3, 4). Acumulado: 40 / 70 / 130 / 260 en total. Los ejes de
+ * los temas candentes con más preguntas (eco, mig, val, ord) llevan 4 en el modo de 40; todos llevan al menos 3 / 5 /
+ * 10 / 21 por modo.
+ */
 export const AXIS_TIER_PLAN: Readonly<Record<AxisId, readonly [number, number, number, number]>> = {
-  eco: [3, 3, 5, 11],
-  soc: [3, 2, 6, 10],
-  mig: [3, 3, 5, 11],
-  ide: [2, 3, 6, 10],
-  rel: [3, 2, 6, 10],
-  val: [3, 3, 5, 11],
-  ord: [3, 3, 5, 11],
-  pod: [2, 3, 5, 11],
-  eti: [3, 2, 6, 10],
-  geo: [3, 2, 5, 11],
-  des: [2, 3, 5, 11],
-  est: [2, 3, 5, 11],
+  eco: [4, 2, 5, 13],
+  soc: [3, 3, 5, 10],
+  mig: [4, 2, 5, 11],
+  ide: [3, 3, 5, 10],
+  rel: [3, 3, 5, 10],
+  val: [4, 2, 5, 13],
+  ord: [4, 2, 5, 11],
+  pod: [3, 3, 5, 10],
+  eti: [3, 3, 5, 10],
+  geo: [3, 3, 5, 10],
+  des: [3, 2, 5, 11],
+  est: [3, 2, 5, 11],
 };
 
 /** Diferencia máxima entre afirmaciones "de acuerdo = polo +" y "= polo −" por eje, según el tier máximo del modo. */
 export const MAX_POLARITY_GAP: Readonly<Record<Question['tier'], number>> = { 1: 1, 2: 1, 3: 2, 4: 2 };
-
-export const TIER_OF_MODE: Readonly<Record<Mode, Question['tier']>> = { 32: 1, 64: 2, 128: 3, 256: 4 };
 
 export function normalizeText(text: string): string {
   return text
@@ -118,7 +120,11 @@ export function validateBank(
   secondary: readonly TopicId[],
 ): string[] {
   const errors: string[] = [];
-  const expected = { 1: 32, 2: 32, 3: 64, 4: 128 } as const;
+  // Tamaño de cada tier = diferencia entre modos consecutivos (40 / 30 / 60 / 130).
+  const expected = Object.fromEntries(MODES.map((mode, i) => [i + 1, mode - (MODES[i - 1] ?? 0)])) as Record<
+    Question['tier'],
+    number
+  >;
   for (const tier of [1, 2, 3, 4] as const) {
     const count = bank.filter((question) => question.tier === tier).length;
     if (count !== expected[tier]) errors.push(`tier ${tier}: ${count} preguntas; deben ser ${expected[tier]}`);
@@ -164,6 +170,7 @@ export const REQUIRED_PROFILE_IDS = [
   'par-od',
   'par-fnp',
   'par-gens',
+  'par-pct', // izquierda comunista (dossier 24): el banco debe distinguirla de la socialdemocracia de OD
   'med-alofoke',
   'gob-trujillo',
   'gob-bosch-1963',

@@ -1,4 +1,4 @@
-// Medios, outsiders, artistas, influencers y movimientos (docs/PLAN.md §11.5–11.8 y §11.12).
+// Medios, outsiders, artistas, influencers y movimientos (docs/PLAN.md §11.5–11.8, §11.12 y §11.13, dossier 24).
 // Puntajes: exactamente los de las tablas del PLAN, en el orden eco soc mig ide rel val ord pod eti geo des est.
 // Confianza: los valores con * del PLAN son 'baja'; los ejes sin entrada quedan en 'media' (por defecto).
 // `eti` de personas vivas = discurso y posiciones declaradas, no juicio de conducta.
@@ -302,6 +302,69 @@ export const mediaticos: Profile[] = [
       {
         title: 'Cristianos Gays: entrevista al pastor Deivis Ventura (2024)',
         url: 'https://www.cristianosgays.com/2024/10/21/entrevista-al-pastor-deivis-ventura-sigo-siendo-un-hombre-gay-negro-y-pobre-que-vive-la-discriminacion-en-diferentes-dimensiones-por-carlos-osma/',
+      },
+    ],
+    asOf: '2026-09',
+  },
+  // Movimientos de izquierda radical (dossier 24).
+  {
+    id: 'mov-falpo',
+    name: 'Frente Amplio de Lucha Popular (FALPO)',
+    kind: 'movimiento',
+    subtitle: 'Organización popular del Cibao y el Nordeste (desde 1985) · huelgas regionales y contra Barrick',
+    summary:
+      'Organización popular fundada en 1985, con base en San Francisco de Macorís, Salcedo, Tenares y Cotuí. Convoca huelgas regionales por obras y servicios, encabezó en 2025 las protestas contra la nueva presa de colas de Barrick en Cotuí y lanzó en 2020 la campaña "Corrup-Tour" contra la corrupción. Se opone a la minería a gran escala y denuncia la militarización de sus huelgas. No es el partido Frente Amplio.',
+    scores: { eco: -65, soc: -70, mig: 10, ide: 10, rel: 20, val: 25, ord: 45, pod: 10, eti: 75, geo: 40, des: 80, est: 75 },
+    confidence: { ...bajaSalvo('eco', 'soc', 'ord', 'eti', 'des', 'est'), des: 'alta' },
+    sources: [
+      {
+        title: 'N Digital: el FALPO reitera su convocatoria de paro general en Salcedo y Tenares (feb-2025)',
+        url: 'https://n.com.do/2025/02/14/falpo-reitera-su-convocatoria-de-paro-general-en-salcedo-y-tenares-la-semana-proxima/',
+      },
+      {
+        title: 'N Digital: grupos comunitarios anuncian protestas en Cotuí contra la nueva presa de colas de Barrick (jun-2025)',
+        url: 'https://n.com.do/2025/06/23/grupos-comunitarios-anuncian-protestas-en-cotui-contra-nueva-presa-de-cola-de-barrick/',
+      },
+      {
+        title: 'N Digital: el FALPO lanza la campaña "Corrup-Tour" contra la corrupción e impunidad (sep-2020)',
+        url: 'https://n.com.do/2020/09/08/falpo-lanza-campana-corruptour-%c2%a8contra-la-corrupcion-e-impunidad%c2%a8/',
+      },
+      {
+        title: 'Barrigaverde: el FALPO da por concluida la huelga en Salcedo (sep-2026)',
+        url: 'https://barrigaverde.net/falpo-da-por-concluida-huelga-en-salcedo-y-advierte-que-volvera-a-las-calles-si-no-hay-respuestas/',
+      },
+      {
+        title: 'Vértice Crítico: el FALPO reclama una política integral de seguridad (sep-2026)',
+        url: 'https://verticecritico.net/2026/09/27/falpo-reclama-politica-integral-de-seguridad-ante-violencia-y-delincuencia/',
+      },
+    ],
+    asOf: '2026-09',
+  },
+  {
+    id: 'mov-coordinadora-popular',
+    name: 'Coordinadora Popular Nacional (CPN)',
+    kind: 'movimiento',
+    subtitle: 'Coordinadora de organizaciones populares, campesinas y ambientales · contra la minería de oro',
+    summary:
+      'Coordinadora de organizaciones populares, campesinas y ambientales. Encabeza la lucha contra la minería de oro (GoldQuest en San Juan, Barrick en Cotuí), rechaza los "paquetazos" fiscales y la eliminación de la cesantía, reclama derechos para los dominicanos de ascendencia haitiana y en enero de 2026 protestó contra el uso de San Isidro y Las Américas por EE.UU., en solidaridad con Venezuela.',
+    scores: { eco: -70, soc: -75, mig: 30, ide: 45, rel: 30, val: 35, ord: 35, pod: 40, eti: 55, geo: 85, des: 85, est: 60 },
+    confidence: { ...bajaSalvo('eco', 'soc', 'ide', 'eti', 'geo', 'des', 'est'), des: 'alta' },
+    sources: [
+      {
+        title: 'Swissinfo (EFE): la Coordinadora Popular Nacional convoca un plantón en solidaridad con Venezuela (ene-2026)',
+        url: 'https://www.swissinfo.ch/spa/coordinadora-popular-nacional-convoca-un-plant%C3%B3n-en-solidaridad-con-venezuela/90740197',
+      },
+      {
+        title: '7 Días: la Coordinadora Popular inicia nuevas protestas cívicas por el medio ambiente (may-2026)',
+        url: 'https://7dias.com.do/2026/05/14/coordinadora-popular-inicia-desde-hoy-nuevas-protestas-civicas-por-el-medio-ambiente/',
+      },
+      {
+        title: 'Hoy: la CPN decide respaldar las luchas sociales (jul-2026)',
+        url: 'https://hoy.com.do/el-pais/cpn-decide-respaldar-luchas-sociales_1094577.html',
+      },
+      {
+        title: 'Hoy: la región marchará contra la violencia, los abusos y los desalojos (sep-2026)',
+        url: 'https://hoy.com.do/el-pais/region-marchara-violencia-abusos-desalojo_1104009.html',
       },
     ],
     asOf: '2026-09',

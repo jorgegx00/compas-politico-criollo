@@ -1,12 +1,12 @@
 import { AXIS_IDS } from '../data/axes.ts';
 import type { AxisId, Question } from '../data/types.ts';
 
-export type Mode = 32 | 64 | 128 | 256;
+export type Mode = 40 | 70 | 130 | 260;
 
-export const MODES: readonly Mode[] = [32, 64, 128, 256];
+export const MODES: readonly Mode[] = [40, 70, 130, 260];
 
 /** Cada modo incluye los tiers ≤ al suyo, así que cada modo corto está contenido en el siguiente. */
-export const MODE_TIER: Readonly<Record<Mode, Question['tier']>> = { 32: 1, 64: 2, 128: 3, 256: 4 };
+export const MODE_TIER: Readonly<Record<Mode, Question['tier']>> = { 40: 1, 70: 2, 130: 3, 260: 4 };
 
 export function isMode(value: number): value is Mode {
   return (MODES as readonly number[]).includes(value);

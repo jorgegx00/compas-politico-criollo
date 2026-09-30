@@ -4,10 +4,10 @@ import { CONFIDENCE_WEIGHT } from '../engine/matching.ts';
 import type { Mode } from '../engine/modes.ts';
 
 export const MODE_INFO: Readonly<Record<Mode, { minutes: number; title: string; description: string }>> = {
-  32: { minutes: 5, title: 'Rápido', description: 'Lo esencial de cada eje.' },
-  64: { minutes: 10, title: 'Estándar', description: 'Buen equilibrio entre tiempo y precisión.' },
-  128: { minutes: 20, title: 'Detallado', description: 'Más matices en cada tema.' },
-  256: { minutes: 40, title: 'Completo', description: 'Todas las preguntas del banco.' },
+  40: { minutes: 6, title: 'Rápido', description: 'Lo esencial de cada eje.' },
+  70: { minutes: 11, title: 'Estándar', description: 'Buen equilibrio entre tiempo y precisión.' },
+  130: { minutes: 20, title: 'Detallado', description: 'Más matices en cada tema.' },
+  260: { minutes: 40, title: 'Completo', description: 'Todas las preguntas del banco.' },
 };
 
 /** Frase para "Países por eje": "económicamente como Chile", "en migración como Hungría"… */

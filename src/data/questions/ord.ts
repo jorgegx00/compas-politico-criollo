@@ -1,8 +1,15 @@
 import type { Question } from '../types.ts';
 
-/** Eje primario `ord`: −100 = mano dura, +100 = garantismo / DD.HH. Signo del efecto primario alterno (+, −, +…). */
+/** Eje primario `ord`: −100 = mano dura, +100 = garantismo / DD.HH. */
 export const ordQuestions: Question[] = [
   // Tier 1
+  {
+    id: 'ord-03',
+    tier: 1,
+    topic: 'mano-dura',
+    effects: { ord: 2 },
+    text: 'Invertir en empleo y deporte en los barrios reduce más el crimen que poner más policías.',
+  },
   {
     id: 'ord-01',
     tier: 1,
@@ -17,15 +24,17 @@ export const ordQuestions: Question[] = [
     tier: 1,
     topic: 'mano-dura',
     effects: { ord: -3 },
-    text: 'Debería restablecerse la pena de muerte para asesinos y violadores.',
+    text: 'Debería restablecerse la pena de muerte para los asesinos.',
     context: 'La Constitución dominicana (art. 37) prohíbe la pena de muerte.',
   },
   {
-    id: 'ord-03',
+    id: 'ord-06',
     tier: 1,
     topic: 'mano-dura',
-    effects: { ord: 2 },
-    text: 'Invertir en empleo y deporte en los barrios reduce más el crimen que poner más policías.',
+    effects: { ord: -3, pod: -1 },
+    text: 'La República Dominicana necesita un modelo de seguridad como el de Bukele en El Salvador.',
+    context:
+      'En El Salvador, el gobierno de Nayib Bukele mantiene un régimen de excepción contra las pandillas que suspende garantías constitucionales.',
   },
   // Tier 2
   {
@@ -42,22 +51,13 @@ export const ordQuestions: Question[] = [
     effects: { ord: 2 },
     text: 'Es preferible que un culpable quede libre a que un inocente vaya preso.',
   },
-  {
-    id: 'ord-06',
-    tier: 2,
-    topic: 'mano-dura',
-    effects: { ord: -3, pod: -1 },
-    text: 'La República Dominicana necesita un modelo de seguridad como el de Bukele en El Salvador.',
-    context:
-      'En El Salvador, el gobierno de Nayib Bukele mantiene un régimen de excepción contra las pandillas que suspende garantías constitucionales.',
-  },
   // Tier 3
   {
     id: 'ord-07',
     tier: 3,
     topic: 'mano-dura',
     effects: { ord: 2 },
-    text: 'La prisión preventiva se usa en exceso y debería ser la excepción.',
+    text: 'Los jueces deberían dictar prisión preventiva con mucha menos frecuencia que ahora.',
     context: 'La prisión preventiva es encarcelar a un acusado mientras espera el juicio.',
   },
   {
@@ -72,7 +72,7 @@ export const ordQuestions: Question[] = [
     tier: 3,
     topic: 'drogas-armas-alcohol',
     effects: { ord: 2 },
-    text: 'Debería legalizarse la marihuana.',
+    text: 'Debería legalizarse la marihuana para uso recreativo de los adultos.',
   },
   {
     id: 'ord-10',
@@ -112,7 +112,7 @@ export const ordQuestions: Question[] = [
     tier: 4,
     topic: 'drogas-armas-alcohol',
     effects: { ord: -2 },
-    text: 'Los ciudadanos deberían poder comprar y portar armas con más facilidad.',
+    text: 'Debería ser más fácil para un ciudadano tener legalmente un arma en su casa.',
   },
   {
     id: 'ord-15',
@@ -156,7 +156,9 @@ export const ordQuestions: Question[] = [
     tier: 4,
     topic: 'mano-dura',
     effects: { ord: -3 },
-    text: 'Los menores que cometen asesinatos deberían ser juzgados como adultos.',
+    text: 'Los adolescentes de 16 o 17 años que cometan un asesinato deberían ser juzgados como adultos.',
+    context:
+      'La Ley 136-03, modificada por la Ley 106-13, castiga a los adolescentes de 16 y 17 años con hasta 8 años de privación de libertad en centros especializados. Los menores de 13 años no son imputables.',
   },
   {
     id: 'ord-21',

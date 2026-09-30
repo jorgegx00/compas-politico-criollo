@@ -4,6 +4,15 @@ import type { Question } from '../types.ts';
 export const desQuestions: Question[] = [
   // Tier 1
   {
+    id: 'des-05',
+    tier: 1,
+    topic: 'desarrollo',
+    effects: { des: 2 },
+    text: 'El desarrollo turístico de Pedernales debe hacerse sin construir hoteles en Bahía de las Águilas ni en otras zonas protegidas.',
+    context:
+      'En 2021 el gobierno lanzó en Cabo Rojo (Pedernales) un polo turístico de hasta 12,000 habitaciones y prometió que Bahía de las Águilas "permanecerá sin construcciones hoteleras".',
+  },
+  {
     id: 'des-01',
     tier: 1,
     topic: 'mineria-ambiente',
@@ -37,15 +46,6 @@ export const desQuestions: Question[] = [
     text: 'La nueva presa de colas de Barrick en Cotuí se justifica por los ingresos y empleos que genera la mina.',
     context:
       'Barrick opera la mina de oro Pueblo Viejo, en Cotuí, y construye una nueva presa de colas (depósito de residuos mineros) en El Naranjo; en 2025 hubo protestas y reasentamientos en disputa.',
-  },
-  {
-    id: 'des-05',
-    tier: 2,
-    topic: 'desarrollo',
-    effects: { des: 2 },
-    text: 'El desarrollo turístico de Pedernales debe hacerse sin construir hoteles en Bahía de las Águilas ni en otras zonas protegidas.',
-    context:
-      'En 2021 el gobierno lanzó en Cabo Rojo (Pedernales) un polo turístico de hasta 12,000 habitaciones y prometió que Bahía de las Águilas "permanecerá sin construcciones hoteleras".',
   },
   // Tier 3
   {

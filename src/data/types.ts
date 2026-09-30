@@ -35,7 +35,7 @@ export interface Question {
   context?: string;
   /** Peso −3..+3; "de acuerdo" mueve hacia el signo del peso. */
   effects: Partial<Record<AxisId, number>>;
-  /** 32 = tier 1; 64 = 1–2; 128 = 1–3; 256 = 1–4. */
+  /** 40 = tier 1; 70 = 1–2; 130 = 1–3; 260 = 1–4. */
   tier: 1 | 2 | 3 | 4;
   /** Tema, para verificar cobertura y balance de los temas candentes. */
   topic: TopicId;

@@ -13,19 +13,19 @@ export const etiQuestions: Question[] = [
       'El "barrilito" (Fondo de Gestión Legislativa, desde 2007) y el "cofrecito" son fondos que senadores y diputados reciben aparte de su sueldo para dar ayudas sociales en sus demarcaciones.',
   },
   {
+    id: 'eti-03',
+    tier: 1,
+    topic: 'corrupcion',
+    effects: { eti: 3, est: 1 },
+    text: 'Hay que meter presos a los corruptos de todos los gobiernos pasados, aunque se llenen las cárceles de políticos.',
+  },
+  {
     id: 'eti-02',
     tier: 1,
     topic: 'corrupcion',
     effects: { eti: -3 },
     text: 'No importa que un político robe, si hace obras que benefician al pueblo.',
     context: 'Es la idea que en la calle se resume como "roba pero hace".',
-  },
-  {
-    id: 'eti-03',
-    tier: 1,
-    topic: 'corrupcion',
-    effects: { eti: 3, est: 1 },
-    text: 'Hay que meter presos a los corruptos de todos los gobiernos pasados, aunque se llenen las cárceles de políticos.',
   },
   // Tier 2
   {
@@ -44,14 +44,14 @@ export const etiQuestions: Question[] = [
     context:
       'Casos como SENASA (Operación Cobra) y Camaleón (INTRANT) involucran a funcionarios del gobierno actual; Antipulpo, Medusa y Calamar se refieren a gobiernos anteriores.',
   },
-  // Tier 3
   {
     id: 'eti-06',
-    tier: 3,
+    tier: 2,
     topic: 'corrupcion',
     effects: { eti: -2 },
-    text: 'Está bien que un candidato reparta comida o dinero en los barrios durante la campaña, porque la gente lo necesita.',
+    text: 'Está bien que un candidato reparta comida en los barrios durante la campaña, porque la gente la necesita.',
   },
+  // Tier 3
   {
     id: 'eti-07',
     tier: 3,
@@ -65,7 +65,7 @@ export const etiQuestions: Question[] = [
     tier: 3,
     topic: 'corrupcion',
     effects: { eti: -2 },
-    text: 'Un presidente tiene derecho a nombrar a familiares y amigos de confianza en puestos importantes del gobierno.',
+    text: 'Un presidente tiene derecho a nombrar a sus familiares en puestos importantes del gobierno.',
   },
   {
     id: 'eti-09',
